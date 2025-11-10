@@ -1,0 +1,118 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    snappyHexMeshDict;
+}
+#includeEtc    "caseDicts/mesh/generation/snappyHexMeshDict.cfg";
+castellatedMesh    on;
+snap    on;
+addLayers    on;
+geometry
+{
+  refinementBox
+  {
+    type    closedTriSurfaceMesh;
+    file    "refineBox.stl";
+  }
+  vegetation
+  {
+    type    triSurfaceMesh;
+    file    "vegetation.stl";
+  }
+  buildings
+  {
+    type    triSurfaceMesh;
+    file    "buildings.stl";
+  }
+}
+castellatedMeshControls
+{
+  minRefinementCells    0;
+  nCellsBetweenLevels    2;
+  features
+  (
+    {
+      file    "buildings.eMesh";
+      level    4;
+    }
+  );
+  refinementSurfaces
+  {
+    buildings
+    {
+      level    (3 5);
+      patchInfo    { type wall; };
+    }
+  }
+  refinementRegions
+  {
+    refinementBox
+    {
+      mode    inside;
+      levels    ((1E15 2));
+    }
+    vegetation
+    {
+      mode    distance;
+      levels    ((1 5)(2 4));
+    }
+    buildings
+    {
+      mode    distance;
+      levels    ((1 5)(2 4));
+    }
+  }
+  locationInMesh    (10 25.000000000000004 21.9);
+  resolveFeatureAngle    10;
+  allowFreeStandingZoneFaces    true;
+  maxLoadUnbalance    0.1;
+}
+snapControls
+{
+  nSmoothPatch    3;
+  tolerance    1;
+  nSolveIter    80;
+  nRelaxIter    8;
+  nFeatureSnapIter    20;
+  explicitFeatureSnap    true;
+  implicitFeatureSnap    false;
+}
+addLayersControls
+{
+  layers
+  {
+    buildings
+    {
+      nSurfaceLayers    3;
+    }
+  }
+  relativeSizes    false;
+  expansionRatio    1.2;
+  firstLayerThickness    0.15;
+  minThickness    1e-3;
+  nGrow    0;
+  featureAngle    30;
+  slipFeatureAngle    30;
+  nRelaxIter    8;
+  nSmoothSurfaceNormals    1;
+  nSmoothNormals    3;
+  nSmoothThickness    10;
+  maxFaceThicknessRatio    0.5;
+  maxThicknessToMedialRatio    0.3;
+  minMedianAxisAngle    90;
+  nBufferCellsNoExtrude    0;
+  nLayerIter    10;
+}
+meshQualityControls
+{
+}
+writeFlags
+(
+  noRefinement
+  scalarLevels
+  layerSets
+  layerFields
+);
+mergeTolerance    1e-6;

@@ -1,0 +1,36 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    topoSetDict;
+}
+actions
+(
+  {
+    name    vegetation;
+    type    cellSet;
+    action    new;
+    source    surfaceToCell;
+    sourceInfo
+    {
+      file    "constant/triSurface/vegetation.stl";
+      outsidePoints    ((12.2 25.000000000000007 30.599999999999998));
+      includeCut    true;
+      includeInside    true;
+      includeOutside    false;
+      nearDistance    -1;
+      curvature    -100;
+    }
+  }
+  {
+    name    vegetation;
+    type    cellZoneSet;
+    action    new;
+    source    setToCellZone;
+    sourceInfo
+    {
+      set    vegetation;
+    }
+  }
+);

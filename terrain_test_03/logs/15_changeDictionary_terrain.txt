@@ -1,0 +1,75 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+Build  : 8-53cd1468e263
+Exec   : C:/PROGRA~1/BLUECF~1/OpenFOAM-8/platforms/mingw_w64GccDPInt32Opt/bin/changeDictionary.exe -region terrain
+Date   : Nov 10 2025
+Time   : 14:57:45
+Host   : "CIPHER-6869"
+PID    : 12460
+I/O    : uncollated
+Case   : C:/MetaFoam_Cases/terrain_test_03
+nProcs : 1
+SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+--> FOAM Warning : 
+changeDictionary has been superseded by foamDictionary and is now deprecated.
+
+Create time
+
+Create mesh terrain for time = 0
+
+Read dictionary changeDictionaryDict with replacements for dictionaries 1(boundary)
+Reading polyMesh/boundary file to extract patch names
+Loaded dictionary boundary with entries 
+3
+(
+terrain_to_air
+terrain_sides
+terrain_bottom
+)
+
+Replacing entries in dictionary boundary
+Special handling of boundary as polyMesh/boundary file.
+Merging entries from 1(terrain_to_air)
+fieldDict:
+{
+    terrain_to_air
+    {
+        type            mappedWall;
+        nFaces          44550;
+        startFace       2176950;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     terrain;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+    terrain_sides
+    {
+        type            patch;
+        nFaces          12000;
+        startFace       2221500;
+    }
+    terrain_bottom
+    {
+        type            patch;
+        nFaces          44550;
+        startFace       2233500;
+    }
+}
+
+Writing modified boundary
+
+End
+

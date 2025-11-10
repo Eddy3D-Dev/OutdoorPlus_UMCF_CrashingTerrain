@@ -1,0 +1,36 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  location    "system";
+  object    controlDict;
+}
+application    urbanMicroclimateFoam;
+startFrom    latestTime;
+startTime    0;
+stopAt    endTime;
+endTime    7200;
+deltaT    3600;
+writeControl    timeStep;
+writeInterval    1;
+purgeWrite    0;
+writeFormat    ascii;
+writePrecision    8;
+writeCompression    on;
+timeFormat    general;
+timePrecision    12;
+runTimeModifiable    true;
+initialSolidTimestepFactor    0.001666667;
+minDeltaT    1E-6;
+maxDeltaT    100;
+minFluidIteration    0;
+maxFluidIteration    50;
+pcEqnForm    pc-based;
+blending    true;
+blendingCoeffs
+{
+  dampingThickness    60;
+  alphaCoeffU    0.3;
+  alphaCoeffT    0.1;
+}

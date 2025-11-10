@@ -1,0 +1,54 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    volScalarField;
+  location    "0/air";
+  object    T;
+}
+dimensions    [0 0 0 1 0 0 0];
+internalField    uniform 297.05;
+boundaryField
+{
+  left
+  {
+    type    slip;
+    value    uniform 297.05;
+  }
+  right
+  {
+    type    slip;
+    value    uniform 297.05;
+  }
+  top
+  {
+    type    slip;
+    value    uniform 297.05;
+  }
+  terrain
+  {
+    type    zeroGradient;
+    value    uniform 297.05;
+  }
+  back
+  {
+    type    inletOutlet;
+    inletValue    uniform 297.0;
+    value    uniform 297.05;
+  }
+  front
+  {
+    type    uniformFixedValue;
+    uniformValue    tableFile;
+    uniformValueCoeffs
+    {
+      file    "$FOAM_CASE/0/air/Tambient";
+    }
+    value    uniform 297.05;
+  }
+  buildings
+  {
+    type    compressible::CFDHAMfluidTemperatureCoupledMixed;
+    value    uniform 297.05;
+  }
+}

@@ -1,0 +1,58 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+Build  : 8-53cd1468e263
+Exec   : C:/PROGRA~1/BLUECF~1/OpenFOAM-8/platforms/mingw_w64GccDPInt32Opt/bin/createPatch.exe -region buildings -overwrite
+Date   : Nov 10 2025
+Time   : 14:56:31
+Host   : "CIPHER-6869"
+PID    : 39712
+I/O    : uncollated
+Case   : C:/MetaFoam_Cases/terrain_test_03
+nProcs : 1
+SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh buildings for time = 0
+
+Reading createPatchDict
+
+Adding new patch buildings_to_air as patch 3 from 
+{
+    type            patch;
+}
+
+Adding new patch interior as patch 4 from 
+{
+    type            patch;
+}
+
+
+Moving faces from patch originalPatch to patch 3
+Moving faces from patch otherSide to patch 4
+
+Doing topology modification to order faces.
+
+Not synchronising points.
+
+Removing patches with no faces in them.
+
+Removing zero-sized patch sides type wall at position 0
+Removing zero-sized patch originalPatch type patch at position 1
+Removing zero-sized patch otherSide type patch at position 2
+Removing patches.
+Writing repatched mesh to 0
+
+End
+

@@ -1,0 +1,28 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    changeDictionaryDict;
+}
+boundary
+{
+  terrain
+  {
+    type    mappedWall;
+    sampleMode    nearestPatchFace;
+    sampleRegion    terrain;
+    samplePatch    terrrain_to_air;
+    offsetMode    uniform;
+    offset    (0 0 0);
+  }
+  buildings
+  {
+    type    mappedWall;
+    sampleMode    nearestPatchFace;
+    sampleRegion    buildings;
+    samplePatch    buildings_to_air;
+    offsetMode    uniform;
+    offset    (0 0 0);
+  }
+}

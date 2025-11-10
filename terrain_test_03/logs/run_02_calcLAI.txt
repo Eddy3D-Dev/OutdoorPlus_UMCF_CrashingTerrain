@@ -1,0 +1,53 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+Build  : 8-53cd1468e263
+Exec   : C:/PROGRA~1/BLUECF~1/ofuser-of8/platforms/mingw_w64GccDPInt32Opt/bin/calcLAI.exe -region air
+Date   : Nov 10 2025
+Time   : 15:00:01
+Host   : "CIPHER-6869"
+PID    : 37900
+I/O    : uncollated
+Case   : C:/MetaFoam_Cases/terrain_test_03
+nProcs : 1
+SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+timeDirs: 1(0	0)
+Create mesh air for time = 0
+
+
+Reading g
+Gravity is = g [0 1 -2 0 0 0 0] (0 0 -9.81)
+Vertical vector : (-0 -0 1)
+Creating interpolation setup...
+
+Interpolation from fvMesh to Cartesian mesh...minCellSizeFactor = 10, minCellL = 1.4362576
+ took 0.417 second(s).
+done !!! 
+Interpolation from cartesian to rotated cartesian mesh...
+
+vegLocalCoarseCf 1562
+Solar ray direction 0, It took 0.104 second(s).
+vegLocalCoarseCf 1562
+Solar ray direction 1, It took 0.069 second(s).
+
+Writing fields: kcLAI boundary
+
+Writing fields: div qrsw
+
+Total time took: 1.278 second(s).
+
+End
+

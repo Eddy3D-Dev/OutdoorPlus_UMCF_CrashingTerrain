@@ -1,0 +1,85 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    volScalarField;
+  location    "0/vegetation";
+  object    T;
+}
+dimensions    [0 0 0 1 0 0 0];
+internalField    uniform 297.05;
+boundaryField
+{
+  left
+  {
+    type    mapped;
+    field    T;
+    setAverage    0;
+    average    0;
+    interpolationScheme    cell;
+    value    uniform 297.05;
+  }
+  right
+  {
+    type    mapped;
+    field    T;
+    setAverage    0;
+    average    0;
+    interpolationScheme    cell;
+    value    uniform 297.05;
+  }
+  back
+  {
+    type    mapped;
+    field    T;
+    setAverage    0;
+    average    0;
+    interpolationScheme    cell;
+    value    uniform 297.05;
+  }
+  front
+  {
+    type    mapped;
+    field    T;
+    setAverage    0;
+    average    0;
+    interpolationScheme    cell;
+    value    uniform 297.05;
+  }
+  terrain
+  {
+    type    mapped;
+    field    T;
+    setAverage    0;
+    average    0;
+    interpolationScheme    cell;
+    value    uniform 297;
+  }
+  top
+  {
+    type    mapped;
+    field    T;
+    setAverage    0;
+    average    0;
+    interpolationScheme    cell;
+    value    uniform 297.05;
+  }
+  air_to_vegetation
+  {
+    type    mappedLeafTemperature;
+    field    Tl;
+    setAverage    0;
+    average    0;
+    interpolationScheme    cell;
+    value    uniform 297.05;
+  }
+  buildings
+  {
+    type    mapped;
+    field    T;
+    setAverage    0;
+    average    0;
+    interpolationScheme    cell;
+    value    uniform 297.05;
+  }
+}

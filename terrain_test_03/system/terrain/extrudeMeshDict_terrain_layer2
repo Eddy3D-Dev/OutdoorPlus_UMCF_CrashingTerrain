@@ -1,0 +1,21 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    extrudeMeshDict;
+}
+constructFrom    mesh;
+sourceCase    ".";
+sourcePatches    (otherSide);
+exposedPatchName    movingWall;
+flipNormals    false;
+extrudeModel    linearNormal;
+nLayers    14;
+expansionRatio    1.2;
+linearNormalCoeffs
+{
+  thickness    1.9;
+}
+mergeFaces    false;
+mergeTol    0;

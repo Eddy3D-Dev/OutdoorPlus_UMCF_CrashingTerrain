@@ -1,0 +1,29 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    volScalarField;
+  location    "0/terrain";
+  object    Ts;
+}
+dimensions    [0 0 0 1 0 0 0];
+internalField    uniform 300;
+boundaryField
+{
+  terrain_to_air
+  {
+    type    compressible::CFDHAMsolidTemperatureCoupledMixed;
+    qrNbr    qr;
+    qsNbr    qs;
+    value    uniform 300;
+  }
+  terrain_sides
+  {
+    type    zeroGradient;
+  }
+  terrain_bottom
+  {
+    type    fixedValue;
+    value    uniform 283.15;
+  }
+}

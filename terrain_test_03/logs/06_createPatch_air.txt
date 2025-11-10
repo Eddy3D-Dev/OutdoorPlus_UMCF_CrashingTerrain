@@ -1,0 +1,50 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+Build  : 8-53cd1468e263
+Exec   : C:/PROGRA~1/BLUECF~1/OpenFOAM-8/platforms/mingw_w64GccDPInt32Opt/bin/createPatch.exe -region vegetation -overwrite
+Date   : Nov 10 2025
+Time   : 14:55:57
+Host   : "CIPHER-6869"
+PID    : 35520
+I/O    : uncollated
+Case   : C:/MetaFoam_Cases/terrain_test_03
+nProcs : 1
+SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh vegetation for time = 0
+
+Reading createPatchDict
+
+Adding new patch air_to_vegetation as patch 8 from 
+{
+    type            wall;
+}
+
+
+Moving faces from patch vegetation to patch 8
+
+Doing topology modification to order faces.
+
+Not synchronising points.
+
+Removing patches with no faces in them.
+
+Removing zero-sized patch vegetation type wall at position 6
+Removing patches.
+Writing repatched mesh to 0
+
+End
+

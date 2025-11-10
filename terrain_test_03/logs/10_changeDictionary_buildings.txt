@@ -1,0 +1,68 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+Build  : 8-53cd1468e263
+Exec   : C:/PROGRA~1/BLUECF~1/OpenFOAM-8/platforms/mingw_w64GccDPInt32Opt/bin/changeDictionary.exe -region buildings
+Date   : Nov 10 2025
+Time   : 14:56:36
+Host   : "CIPHER-6869"
+PID    : 17388
+I/O    : uncollated
+Case   : C:/MetaFoam_Cases/terrain_test_03
+nProcs : 1
+SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+--> FOAM Warning : 
+changeDictionary has been superseded by foamDictionary and is now deprecated.
+
+Create time
+
+Create mesh buildings for time = 0
+
+Read dictionary changeDictionaryDict with replacements for dictionaries 1(boundary)
+Reading polyMesh/boundary file to extract patch names
+Loaded dictionary boundary with entries 
+2
+(
+buildings_to_air
+interior
+)
+
+Replacing entries in dictionary boundary
+Special handling of boundary as polyMesh/boundary file.
+Merging entries from 1(buildings_to_air)
+fieldDict:
+{
+    buildings_to_air
+    {
+        type            mappedWall;
+        nFaces          4912;
+        startFace       117888;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     buildings;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+    interior
+    {
+        type            patch;
+        nFaces          4912;
+        startFace       122800;
+    }
+}
+
+Writing modified boundary
+
+End
+

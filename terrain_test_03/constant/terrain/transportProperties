@@ -1,0 +1,27 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  location    "constant";
+  object    transportProperties;
+}
+buildingMaterials
+(
+  {
+    name    ground_layer1;
+    buildingMaterialModel    AsphaltConcrete;
+    rho    1980;
+    cap    820;
+    lambda1    1.35;
+    lambda2    0;
+  }
+  {
+    name    ground_layer2;
+    buildingMaterialModel    Soil;
+    rho    1150;
+    cap    650;
+    lambda1    1.5;
+    lambda2    0;
+  }
+);

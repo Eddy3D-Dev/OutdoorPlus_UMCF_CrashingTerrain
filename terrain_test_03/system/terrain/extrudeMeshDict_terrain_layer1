@@ -1,0 +1,19 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    extrudeMeshDict;
+}
+constructFrom    surface;
+surface    "constant/triSurface/terrain.obj";
+flipNormals    true;
+extrudeModel    linearNormal;
+nLayers    6;
+expansionRatio    1.2;
+linearNormalCoeffs
+{
+  thickness    0.1;
+}
+mergeFaces    false;
+mergeTol    0;

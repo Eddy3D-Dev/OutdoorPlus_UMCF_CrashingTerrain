@@ -1,0 +1,128 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  location    "system";
+  object    fvOptions;
+}
+residuals_air
+{
+  type    residuals;
+  libs    ("libutilityFunctionObjects.so");
+  region    air;
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  writeControl    timeStep;
+  writeInterval    1;
+}
+residuals_buildings
+{
+  type    residuals;
+  libs    ("libutilityFunctionObjects.so");
+  region    buildings;
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  writeControl    timeStep;
+  writeInterval    1;
+}
+residuals_vegetation
+{
+  type    residuals;
+  libs    ("libutilityFunctionObjects.so");
+  region    vegetation;
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  writeControl    timeStep;
+  writeInterval    1;
+}
+residuals_terrain
+{
+  type    residuals;
+  libs    ("libutilityFunctionObjects.so");
+  region    terrain;
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  writeControl    timeStep;
+  writeInterval    1;
+}
+fieldAverage_air
+{
+  type    fieldAverage;
+  libs    ("libfieldFunctionObjects.so");
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  region    air;
+  enabled    true;
+  writeControl    timeStep;
+  writeInterval    1;
+}
+fieldAverage_building
+{
+  type    fieldAverage;
+  libs    ("libfieldFunctionObjects.so");
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  region    building;
+  enabled    true;
+  writeControl    timeStep;
+  writeInterval    1;
+}
+fieldAverage_vegetation
+{
+  type    fieldAverage;
+  libs    ("libfieldFunctionObjects.so");
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  region    vegetation;
+  enabled    true;
+  writeControl    timeStep;
+  writeInterval    1;
+}
+fieldAverage_terrain
+{
+  type    fieldAverage;
+  libs    ("libfieldFunctionObjects.so");
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  region    terrain;
+  enabled    true;
+  writeControl    timeStep;
+  writeInterval    1;
+}
+fieldMinMax_air
+{
+  type    fieldMinMax;
+  libs    ("libfieldFunctionObjects.so");
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  region    air;
+  enabled    true;
+  writeControl    timeStep;
+  writeInterval    1;
+  mode    magnitude;
+}
+fieldMinMax_buildings
+{
+  type    fieldMinMax;
+  libs    ("libfieldFunctionObjects.so");
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  region    buildings;
+  enabled    true;
+  writeControl    timeStep;
+  writeInterval    1;
+  mode    magnitude;
+}
+fieldMinMax_vegetation
+{
+  type    fieldMinMax;
+  libs    ("libfieldFunctionObjects.so");
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  region    vegetation;
+  enabled    true;
+  writeControl    timeStep;
+  writeInterval    1;
+  mode    magnitude;
+}
+fieldMinMax_terrain
+{
+  type    fieldMinMax;
+  libs    ("libfieldFunctionObjects.so");
+  fields    (alphat epsilon omega gcr k nut p p_rgh T TMean TI Ts rho rs qr qs U UMean w ws);
+  region    terrain;
+  enabled    true;
+  writeControl    timeStep;
+  writeInterval    1;
+  mode    magnitude;
+}

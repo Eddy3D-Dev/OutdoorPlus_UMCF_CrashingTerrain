@@ -1,0 +1,168 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+Build  : 8-53cd1468e263
+Exec   : C:/PROGRA~1/BLUECF~1/OpenFOAM-8/platforms/mingw_w64GccDPInt32Opt/bin/changeDictionary.exe -region vegetation
+Date   : Nov 10 2025
+Time   : 14:56:03
+Host   : "CIPHER-6869"
+PID    : 37700
+I/O    : uncollated
+Case   : C:/MetaFoam_Cases/terrain_test_03
+nProcs : 1
+SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+--> FOAM Warning : 
+changeDictionary has been superseded by foamDictionary and is now deprecated.
+
+Create time
+
+Create mesh vegetation for time = 0
+
+Read dictionary changeDictionaryDict with replacements for dictionaries 1(boundary)
+Reading polyMesh/boundary file to extract patch names
+Loaded dictionary boundary with entries 
+8
+(
+left
+right
+back
+front
+terrain
+top
+buildings
+air_to_vegetation
+)
+
+Extracted patch groups:
+    group wall with patches 
+3
+(
+terrain
+buildings
+air_to_vegetation
+)
+
+Replacing entries in dictionary boundary
+Special handling of boundary as polyMesh/boundary file.
+Merging entries from 
+8
+(
+left
+right
+back
+front
+top
+air_to_vegetation
+buildings
+terrain
+)
+
+fieldDict:
+{
+    left
+    {
+        type            mappedPatch;
+        nFaces          36;
+        startFace       128641;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     left;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+    right
+    {
+        type            mappedPatch;
+        nFaces          36;
+        startFace       128677;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     right;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+    back
+    {
+        type            mappedPatch;
+        nFaces          44;
+        startFace       128713;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     back;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+    front
+    {
+        type            mappedPatch;
+        nFaces          44;
+        startFace       128757;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     front;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+    terrain
+    {
+        type            mappedWall;
+        inGroups        List<word> 0();
+        nFaces          2382;
+        startFace       128801;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     terrain;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+    top
+    {
+        type            mappedPatch;
+        nFaces          99;
+        startFace       131183;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     top;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+    buildings
+    {
+        type            mappedWall;
+        inGroups        List<word> 0();
+        nFaces          8629;
+        startFace       131282;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     buildings;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+    air_to_vegetation
+    {
+        type            mappedWall;
+        inGroups        List<word> 0();
+        nFaces          1891;
+        startFace       139911;
+        sampleMode      nearestCell;
+        sampleRegion    air;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+}
+
+Writing modified boundary
+
+End
+

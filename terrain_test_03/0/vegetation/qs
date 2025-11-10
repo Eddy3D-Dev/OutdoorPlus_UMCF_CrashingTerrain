@@ -1,0 +1,77 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    volScalarField;
+  location    "0/air";
+  object    qs;
+}
+dimensions    [1 0 -3 0 0 0 0];
+internalField    uniform 0;
+boundaryField
+{
+  left
+  {
+    type    solarLoadRadiationViewFactor;
+    albedoMode    lookup;
+    albedo    uniform 0;
+    qso    uniform 0;
+    value    uniform 0;
+  }
+  right
+  {
+    type    solarLoadRadiationViewFactor;
+    albedoMode    lookup;
+    albedo    uniform 0;
+    qso    uniform 0;
+    value    uniform 0;
+  }
+  top
+  {
+    type    solarLoadRadiationViewFactor;
+    albedoMode    lookup;
+    albedo    uniform 0;
+    qso    uniform 0;
+    value    uniform 0;
+  }
+  terrain
+  {
+    type    solarLoadRadiationViewFactor;
+    albedoMode    lookup;
+    albedo    uniform 0.2;
+    qso    uniform 0;
+    value    uniform 0;
+  }
+  back
+  {
+    type    solarLoadRadiationViewFactor;
+    albedoMode    lookup;
+    albedo    uniform 0;
+    qso    uniform 0;
+    value    uniform 0;
+  }
+  front
+  {
+    type    solarLoadRadiationViewFactor;
+    albedoMode    lookup;
+    albedo    uniform 0;
+    qso    uniform 0;
+    value    uniform 0;
+  }
+  air_to_vegetation
+  {
+    type    solarLoadRadiationViewFactor;
+    albedoMode    lookup;
+    albedo    uniform 0.15;
+    qso    uniform 0;
+    value    uniform 0;
+  }
+  buildings
+  {
+    type    solarLoadRadiationViewFactor;
+    albedoMode    lookup;
+    albedo    uniform 0.4;
+    qso    uniform 0;
+    value    uniform 0;
+  }
+}

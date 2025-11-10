@@ -1,0 +1,105 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+Build  : 8-53cd1468e263
+Exec   : C:/PROGRA~1/BLUECF~1/OpenFOAM-8/platforms/mingw_w64GccDPInt32Opt/bin/viewFactorsGen.exe -region vegetation
+Date   : Nov 10 2025
+Time   : 15:00:07
+Host   : "CIPHER-6869"
+PID    : 24608
+I/O    : uncollated
+Case   : C:/MetaFoam_Cases/terrain_test_03
+nProcs : 1
+SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh vegetation for time = 0
+
+
+Creating single cell mesh...
+
+Created single cell mesh...
+
+Total number of coarse faces: 1639
+
+View factor patches included in the calculation : 8(0 1 2 3 4 5 6 7)
+
+Calculating view factors...
+Writing view factor matrix...
+F00: 0
+F01: 0.076636452
+F02: 0.16173948
+F03: 0.16174491
+F04: 0.33414582
+F05: 0.34796275
+F06: 0.014031138
+F07: 0.00098138305
+F10: 0.076636452
+F11: 0
+F12: 0.16173994
+F13: 0.16174435
+F14: 0.33382498
+F15: 0.34796281
+F16: 0.0140456
+F17: 0.00093999505
+F20: 0.1323323
+F21: 0.13233268
+F22: 2.432547e-32
+F23: 0.11913393
+F24: 0.3373986
+F25: 0.35343126
+F26: 0.015561126
+F27: 0.0029107788
+F30: 0.13233675
+F31: 0.13233629
+F32: 0.11913393
+F33: 1.7320849e-32
+F34: 0.29826029
+F35: 0.35343972
+F36: 0.017123157
+F37: 0.0028519177
+F40: 0.12384265
+F41: 0.12372374
+F42: 0.1528367
+F43: 0.13510761
+F44: 0
+F45: 0.47142333
+F46: 0.026730624
+F47: 0.0043934244
+F50: 0.12653191
+F51: 0.12653193
+F52: 0.15708056
+F53: 0.15708432
+F54: 0.46253454
+F55: 0
+F56: 0.023017939
+F57: 0.0032762107
+F60: 0.060582204
+F61: 0.060644648
+F62: 0.082118949
+F63: 0.090362078
+F64: 0.31141577
+F65: 0.27330735
+F66: 0.073954241
+F67: 0.041694596
+F70: 0.022224643
+F71: 0.020874873
+F72: 0.079279472
+F73: 0.077618056
+F74: 0.34287587
+F75: 0.20221726
+F76: 0.26838871
+F77: 0.016865138
+End
+

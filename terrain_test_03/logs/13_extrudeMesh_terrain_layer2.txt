@@ -1,0 +1,48 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+Build  : 8-53cd1468e263
+Exec   : C:/PROGRA~1/BLUECF~1/OpenFOAM-8/platforms/mingw_w64GccDPInt32Opt/bin/extrudeMesh.exe
+Date   : Nov 10 2025
+Time   : 14:57:05
+Host   : "CIPHER-6869"
+PID    : 36780
+I/O    : uncollated
+Case   : C:/MetaFoam_Cases/terrain_test_03
+nProcs : 1
+SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting extrudeModel linearNormal
+Extruding from mesh using model linearNormal
+Not collapsing any edges after extrusion
+
+Extruding patches 1(otherSide) on mesh "C:/MetaFoam_Cases/terrain_test_03"
+
+Create mesh for time = 0
+
+Adding overall 0 processor patches.
+Testing:"C:/MetaFoam_Cases/terrain_test_03/system/fvSchemes"
+Mesh bounding box : (-55.299999 -57.5 -2) (79.699997 107.5 0)
+        with span : (135 165 2)
+Merge distance    : 0
+
+Writing mesh to "constant/region0"
+
+Writing added cells to cellSet addedCells
+
+End
+

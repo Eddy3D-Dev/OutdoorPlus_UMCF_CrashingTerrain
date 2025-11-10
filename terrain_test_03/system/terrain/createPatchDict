@@ -1,0 +1,41 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    createPatchDict;
+}
+pointSync    false;
+patches
+(
+  {
+    name    terrain_to_air;
+    patchInfo
+    {
+      type    patch;
+    }
+    constructFrom    patches;
+    patches    (originalPatch);
+    set    f0;
+  }
+  {
+    name    terrain_sides;
+    patchInfo
+    {
+      type    patch;
+    }
+    constructFrom    patches;
+    patches    (sides);
+    set    f0;
+  }
+  {
+    name    terrain_bottom;
+    patchInfo
+    {
+      type    patch;
+    }
+    constructFrom    patches;
+    patches    (otherSide);
+    set    f0;
+  }
+);

@@ -1,0 +1,88 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     0.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/air/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+7
+(
+    left
+    {
+        type            patch;
+        nFaces          36;
+        startFace       201191;
+    }
+
+    right
+    {
+        type            patch;
+        nFaces          36;
+        startFace       201227;
+    }
+
+    back
+    {
+        type            patch;
+        nFaces          44;
+        startFace       201263;
+    }
+
+    front
+    {
+        type            patch;
+        nFaces          44;
+        startFace       201307;
+    }
+
+    terrain
+    {
+        type            mappedWall;
+        inGroups        List<word> 0();
+        nFaces          3402;
+        startFace       201351;
+        sampleMode      nearestPatchFace;
+        sampleRegion    terrain;
+        samplePatch     terrrain_to_air;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+
+    top
+    {
+        type            patch;
+        nFaces          99;
+        startFace       204753;
+    }
+
+    buildings
+    {
+        type            mappedWall;
+        inGroups        List<word> 0();
+        nFaces          8629;
+        startFace       204852;
+        sampleMode      nearestPatchFace;
+        sampleRegion    buildings;
+        samplePatch     buildings_to_air;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+
+)
+
+
+// ************************************************************************* //

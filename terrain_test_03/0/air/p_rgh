@@ -1,0 +1,48 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    volScalarField;
+  location    "0/air";
+  object    p_rgh;
+}
+dimensions    [1 -1 -2 0 0 0 0];
+internalField    uniform 1e5;
+boundaryField
+{
+  left
+  {
+    type    slip;
+  }
+  right
+  {
+    type    slip;
+  }
+  top
+  {
+    type    slip;
+  }
+  terrain
+  {
+    type    fixedFluxPressure;
+    gradient    uniform 0;
+    value    uniform 1e5;
+  }
+  back
+  {
+    type    fixedValue;
+    value    uniform 1e5;
+  }
+  front
+  {
+    type    fixedFluxPressure;
+    gradient    uniform 0;
+    value    uniform 1e5;
+  }
+  buildings
+  {
+    type    fixedFluxPressure;
+    gradient    uniform 0;
+    value    uniform 1e5;
+  }
+}

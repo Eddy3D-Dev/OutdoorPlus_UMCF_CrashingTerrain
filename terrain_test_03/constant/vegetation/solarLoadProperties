@@ -1,0 +1,17 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  location    "constant";
+  object    solarLoadProperties;
+}
+solarLoadModel    directAndDiffuse;
+directAndDiffuseCoeffs
+{
+  smoothing    true;
+  constantAlbedo    true;
+}
+solverFreq    1;
+solarLoadAbsorptionEmissionModel    none;
+solarLoadScatterModel    none;
