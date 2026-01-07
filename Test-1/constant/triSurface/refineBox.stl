@@ -1,0 +1,86 @@
+solid ascii_stl
+  facet normal 0 -0 -1
+    outer loop
+      vertex 40 70 0
+      vertex 40 -20 0
+      vertex -20 -20 0
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex -20 70 28
+      vertex -20 -20 28
+      vertex 40 -20 28
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex -20 70 0
+      vertex -20 -20 0
+      vertex -20 -20 28
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex -20 -20 0
+      vertex 40 -20 0
+      vertex 40 -20 28
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 40 -20 0
+      vertex 40 70 0
+      vertex 40 70 28
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 40 70 0
+      vertex -20 70 0
+      vertex -20 70 28
+    endloop
+  endfacet
+  facet normal -0 0 -1
+    outer loop
+      vertex 40 70 0
+      vertex -20 -20 0
+      vertex -20 70 0
+    endloop
+  endfacet
+  facet normal -0 0 1
+    outer loop
+      vertex -20 70 28
+      vertex 40 -20 28
+      vertex 40 70 28
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex -20 70 0
+      vertex -20 -20 28
+      vertex -20 70 28
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex -20 -20 0
+      vertex 40 -20 28
+      vertex -20 -20 28
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 40 -20 0
+      vertex 40 70 28
+      vertex 40 -20 28
+    endloop
+  endfacet
+  facet normal 0 1 -0
+    outer loop
+      vertex 40 70 0
+      vertex -20 70 28
+      vertex 40 70 28
+    endloop
+  endfacet
+endsolid ascii_stl

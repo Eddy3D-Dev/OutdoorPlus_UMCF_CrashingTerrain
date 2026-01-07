@@ -1,0 +1,22 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    setFieldsDict;
+}
+defaultFieldValues
+(
+  volScalarFieldValue LAD 0
+);
+regions
+(
+  zoneToCell
+  {
+    name    vegetation;
+    fieldValues
+    (
+      volScalarFieldValue LAD 1
+    );
+  }
+);

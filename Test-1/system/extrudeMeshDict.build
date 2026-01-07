@@ -1,0 +1,19 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    extrudeMeshDict;
+}
+constructFrom    surface;
+surface    "constant/triSurface/buildings.stl.gz";
+flipNormals    true;
+extrudeModel    linearNormal;
+nLayers    10;
+expansionRatio    1.2;
+linearNormalCoeffs
+{
+  thickness    0.05;
+}
+mergeFaces    false;
+mergeTol    0;

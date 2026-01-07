@@ -1,0 +1,49 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    volScalarField;
+  location    "0/air";
+  object    nut;
+}
+dimensions    [0 2 -1 0 0 0 0];
+internalField    uniform 0.1;
+boundaryField
+{
+  left
+  {
+    type    slip;
+  }
+  right
+  {
+    type    slip;
+  }
+  top
+  {
+    type    slip;
+  }
+  terrain
+  {
+    type    nutkAtmRoughWallFunction;
+    z0    uniform 1.0;
+    value    uniform 0.1;
+  }
+  back
+  {
+    type    calculated;
+    value    uniform 0.1;
+  }
+  front
+  {
+    type    calculated;
+    value    uniform 0.1;
+  }
+  buildings
+  {
+    type    nutkWallFunction;
+    Cmu    0.09;
+    kappa    0.41;
+    E    9.8;
+    value    uniform 0.1;
+  }
+}

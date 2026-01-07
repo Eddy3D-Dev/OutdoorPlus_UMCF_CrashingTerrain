@@ -1,0 +1,47 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    volScalarField;
+  location    "0/air";
+  object    alphat;
+}
+dimensions    [1 -1 -1 0 0 0 0];
+internalField    uniform 0.5;
+boundaryField
+{
+  left
+  {
+    type    slip;
+  }
+  right
+  {
+    type    slip;
+  }
+  top
+  {
+    type    slip;
+  }
+  terrain
+  {
+    type    compressible::alphatWallFunction;
+    Prt    0.85;
+    value    uniform 0.1;
+  }
+  back
+  {
+    type    calculated;
+    value    uniform 0.1;
+  }
+  front
+  {
+    type    calculated;
+    value    uniform 0.1;
+  }
+  buildings
+  {
+    type    compressible::alphatWallFunction;
+    Prt    0.85;
+    value    uniform 0.1;
+  }
+}
