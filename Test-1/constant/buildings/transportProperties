@@ -10,7 +10,7 @@ buildingMaterials
 (
   {
     name    buildings;
-    buildingMaterialModel    AsphaltConcrete;
+    buildingMaterialModel    Hamstad5Brick;
     rho    1600;
     cap    1000;
     lambda1    0.682;

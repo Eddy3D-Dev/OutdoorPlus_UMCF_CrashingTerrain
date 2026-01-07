@@ -5,10 +5,16 @@ FoamFile
   class    dictionary;
   object    meshQualityDict;
 }
-#includeEtc    "caseDicts/mesh/generation/meshQualityDict.cfg";
-minTetQuality    1E-12;
+maxNonOrtho    65;
+minVol    1e-13;
+minArea    -1;
+minDeterminant    0.001;
+minFaceWeight    0.05;
+minVolRatio    0.01;
+minTriangleTwist    -1;
+minTetQuality    -1e+30;
 maxBoundarySkewness    4;
-minTwist    0.01;
+minTwist    -1e+30;
 maxConcave    80;
 maxInternalSkewness    4;
 nSmoothScale    4;

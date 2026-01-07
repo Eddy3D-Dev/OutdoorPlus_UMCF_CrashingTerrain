@@ -60,21 +60,21 @@ boundary
     offsetMode    uniform;
     offset    (0 0 0);
   }
-  buildings
-  {
-    type    mappedWall;
-    sampleMode    nearestPatchFace;
-    sampleRegion    air;
-    samplePatch    buildings;
-    offsetMode    uniform;
-    offset    (0 0 0);
-  }
   terrain
   {
     type    mappedWall;
     sampleMode    nearestPatchFace;
     sampleRegion    air;
     samplePatch    terrain;
+    offsetMode    uniform;
+    offset    (0 0 0);
+  }
+  buildings
+  {
+    type    mappedWall;
+    sampleMode    nearestPatchFace;
+    sampleRegion    air;
+    samplePatch    buildings;
     offsetMode    uniform;
     offset    (0 0 0);
   }

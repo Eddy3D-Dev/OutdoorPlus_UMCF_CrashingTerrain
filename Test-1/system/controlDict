@@ -10,7 +10,7 @@ application    urbanMicroclimateFoam;
 startFrom    latestTime;
 startTime    0;
 stopAt    endTime;
-endTime    7200;
+endTime    10800;
 deltaT    3600;
 writeControl    timeStep;
 writeInterval    1;
@@ -25,12 +25,25 @@ initialSolidTimestepFactor    0.001666667;
 minDeltaT    1E-6;
 maxDeltaT    100;
 minFluidIteration    0;
-maxFluidIteration    50;
+maxFluidIteration    100;
 pcEqnForm    pc-based;
-blending    true;
-blendingCoeffs
+fieldMinMax
 {
-  dampingThickness    30;
-  alphaCoeffU    0.3;
-  alphaCoeffT    0.1;
+  type    fieldMinMax;
+  libs    ("libfieldFunctionObjects.so");
+  writeToFile    true;
+  log    true;
+  mode    magnitude;
+  fields    (U p k epsilon omega nut aoa);
 }
+average
+{
+  type    volFieldValue;
+  libs    ("libfieldFunctionObjects.so");
+  fields    (U p);
+  operation    weightedVolAverage;
+  regionType    all;
+  writeFields    false;
+  log    true;
+}
+#includeFunc    residuals;

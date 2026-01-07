@@ -15,7 +15,7 @@ actions
     sourceInfo
     {
       file    "constant/triSurface/vegetation.stl";
-      outsidePoints    ((35 25 40.9));
+      outsidePoints    ((117.34408111572266 190.51026916503906 44.35048780439169));
       includeCut    true;
       includeInside    true;
       includeOutside    false;

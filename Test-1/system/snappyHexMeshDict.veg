@@ -69,7 +69,7 @@ castellatedMeshControls
       levels    ((1 5)(2 4));
     }
   }
-  locationInMesh    (10 25 27);
+  locationInMesh    (115.14408111572266 190.51026916503906 24.399024391174315);
   resolveFeatureAngle    10;
   allowFreeStandingZoneFaces    true;
   maxLoadUnbalance    0.1;
