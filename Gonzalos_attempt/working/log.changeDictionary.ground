@@ -1,0 +1,75 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : changeDictionary -region ground
+Date   : Jan 09 2026
+Time   : 16:56:23
+Host   : "DESKTOP-69FRAKA"
+PID    : 4671
+I/O    : uncollated
+Case   : /mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/urbanMicroclimateFoam-tutorials/windAroundBuildings_CFDHAM_veg
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+--> FOAM Warning : 
+changeDictionary has been superseded by foamDictionary and is now deprecated.
+
+Create time
+
+Create mesh ground for time = 0
+
+Read dictionary changeDictionaryDict with replacements for dictionaries 1(boundary)
+Reading polyMesh/boundary file to extract patch names
+Loaded dictionary boundary with entries 
+3
+(
+sides
+ground_to_air
+bottom
+)
+
+Extracted patch groups:
+    group wall with patches 1(sides)
+Replacing entries in dictionary boundary
+Special handling of boundary as polyMesh/boundary file.
+Merging entries from 1(ground_to_air)
+fieldDict:
+{
+    sides
+    {
+        type            wall;
+        inGroups        List<word> 0();
+        nFaces          10240;
+        startFace       1598412;
+    }
+    ground_to_air
+    {
+        type            mappedWall;
+        nFaces          27208;
+        startFace       1608652;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     ground;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+    bottom
+    {
+        type            patch;
+        nFaces          27208;
+        startFace       1635860;
+    }
+}
+
+Writing modified boundary
+
+End
+

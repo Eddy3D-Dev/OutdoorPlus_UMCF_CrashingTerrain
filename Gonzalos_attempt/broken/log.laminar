@@ -1,0 +1,224 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : buoyantSimpleFoam
+Date   : Jan 10 2026
+Time   : 22:34:28
+Host   : "DESKTOP-69FRAKA"
+PID    : 10052
+I/O    : uncollated
+Case   : /mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/OutdoorPlus_UMCF_CrashingTerrain/Gonzalos_attempt/broken
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: Convergence criteria found
+        p_rgh: tolerance 0.0001
+        U: tolerance 0.0001
+        "(h|e)": tolerance 0.0001
+        "(k|omega|epsilon)": tolerance 0.0001
+
+Reading thermophysical properties
+
+Selecting thermodynamics package 
+{
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState Boussinesq;
+    specie          specie;
+    energy          sensibleInternalEnergy;
+}
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+--> FOAM Warning : 
+    From function bool Foam::IOobject::typeHeaderOk(bool) [with Type = Foam::GeometricField<double, Foam::fvsPatchField, Foam::surfaceMesh>]
+    in file /home/ubuntu/OpenFOAM/OpenFOAM-8/src/OpenFOAM/lnInclude/IOobjectTemplates.C at line 57
+    unexpected class name volScalarField expected surfaceScalarField when reading "/mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/OutdoorPlus_UMCF_CrashingTerrain/Gonzalos_attempt/broken/0/phi"
+Creating turbulence model
+
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+Creating thermophysical transport model
+
+Selecting thermophysical transport type laminar
+Selecting default laminar thermophysical transport model Fourier
+
+Reading g
+
+Reading hRef
+Calculating field g.h
+
+
+Reading pRef
+Reading field p_rgh
+
+No MRF models present
+
+Radiation model not active: radiationProperties not found
+Selecting radiationModel none
+Creating finite volume options from "system/fvOptions"
+
+No finite volume options present
+
+Starting time loop
+
+Time = 1
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 0.0036641485, No Iterations 1
+DILUPBiCGStab:  Solving for Uy, Initial residual = 1, Final residual = 0.0097582528, No Iterations 1
+DILUPBiCGStab:  Solving for Uz, Initial residual = 1, Final residual = 0.0059369486, No Iterations 1
+DILUPBiCGStab:  Solving for e, Initial residual = 1, Final residual = 0.0044693466, No Iterations 1
+DICPCG:  Solving for p_rgh, Initial residual = 1, Final residual = 0.0098356118, No Iterations 22
+DICPCG:  Solving for p_rgh, Initial residual = 0.0083138319, Final residual = 0.0050927752, No Iterations 1000
+time step continuity errors : sum local = 2.7897994e+20, global = 4.9718816e+13, cumulative = 4.9718816e+13
+ExecutionTime = 26.04 s  ClockTime = 26 s
+
+Time = 2
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.08749666, Final residual = 2.5750268e-05, No Iterations 15
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.075864752, Final residual = 2.9494484e-05, No Iterations 16
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.10441127, Final residual = 0.00020124632, No Iterations 15
+DILUPBiCGStab:  Solving for e, Initial residual = 1, Final residual = 0.0050748834, No Iterations 6
+
+    From function Foam::scalar Foam::species::thermo<Thermo, Type>::T(Foam::scalar, Foam::scalar, Foam::scalar, Foam::scalar (Foam::species::thermo<Thermo, Type>::*)(Foam::scalar, Foam::scalar) const, Foam::scalar (Foam::species::thermo<Thermo, Type>::*)(Foam::scalar, Foam::scalar) const, Foam::scalar (Foam::species::thermo<Thermo, Type>::*)(Foam::scalar) const, bool) const [with Thermo = Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >; Type = Foam::sensibleInternalEnergy; Foam::scalar = double; Foam::species::thermo<Thermo, Type> = Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy>]
+    in file /home/ubuntu/OpenFOAM/OpenFOAM-8/src/thermophysicalModels/specie/lnInclude/thermoI.H at line 70
+    Energy -> temperature conversion failed to converge:
+            iter            Test             e/h            Cv/p            Tnew
+               0   1.7269825e+10   1.7345812e+13          1004.4  -1.1451166e+74
+               1  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+               2  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+               3  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+               4  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+               5  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+               6  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+               7  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+               8  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+               9  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              10  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              11  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              12  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              13  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              14  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              15  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              16  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              17  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              18  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              19  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              20  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              21  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              22  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              23  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              24  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              25  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              26  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              27  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              28  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              29  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              30  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              31  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              32  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              33  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              34  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              35  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              36  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              37  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              38  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              39  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              40  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              41  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              42  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              43  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              44  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              45  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              46  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              47  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              48  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              49  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              50  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              51  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              52  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              53  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              54  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              55  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              56  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              57  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              58  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              59  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              60  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              61  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              62  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              63  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              64  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              65  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              66  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              67  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              68  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              69  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              70  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              71  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              72  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              73  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              74  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              75  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              76  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              77  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              78  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              79  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              80  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              81  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              82  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              83  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              84  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              85  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              86  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              87  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              88  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              89  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              90  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              91  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              92  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              93  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              94  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              95  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              96  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              97  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              98  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+              99  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+             100  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+             101  -1.1451166e+74  -1.1501551e+77          1004.4  -1.1451166e+74
+
+
+--> FOAM FATAL ERROR: 
+Maximum number of iterations exceeded: 100
+
+    From function Foam::scalar Foam::species::thermo<Thermo, Type>::T(Foam::scalar, Foam::scalar, Foam::scalar, Foam::scalar (Foam::species::thermo<Thermo, Type>::*)(Foam::scalar, Foam::scalar) const, Foam::scalar (Foam::species::thermo<Thermo, Type>::*)(Foam::scalar, Foam::scalar) const, Foam::scalar (Foam::species::thermo<Thermo, Type>::*)(Foam::scalar) const, bool) const [with Thermo = Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >; Type = Foam::sensibleInternalEnergy; Foam::scalar = double; Foam::species::thermo<Thermo, Type> = Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy>]
+    in file /home/ubuntu/OpenFOAM/OpenFOAM-8/src/thermophysicalModels/specie/lnInclude/thermoI.H at line 106.
+
+FOAM aborting
+
+#0  Foam::error::printStack(Foam::Ostream&) at ??:?
+#1  Foam::error::abort() at ??:?
+#2  Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy>::T(double, double, double, double (Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy>::*)(double, double) const, double (Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy>::*)(double, double) const, double (Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy>::*)(double) const, bool) const at ??:?
+#3  Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy>::T(double, double, double, double (Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy>::*)(double, double) const, double (Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy>::*)(double, double) const, double (Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy>::*)(double) const, bool) const at ??:?
+#4  Foam::heRhoThermo<Foam::rhoThermo, Foam::pureMixture<Foam::constTransport<Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy> > > >::calculate() at ??:?
+#5  Foam::heRhoThermo<Foam::rhoThermo, Foam::pureMixture<Foam::constTransport<Foam::species::thermo<Foam::hConstThermo<Foam::Boussinesq<Foam::specie> >, Foam::sensibleInternalEnergy> > > >::correct() at ??:?
+#6  ? in "/opt/openfoam8/platforms/linux64GccDPInt32Opt/bin/buoyantSimpleFoam"
+#7  __libc_start_main in "/lib/x86_64-linux-gnu/libc.so.6"
+#8  ? in "/opt/openfoam8/platforms/linux64GccDPInt32Opt/bin/buoyantSimpleFoam"

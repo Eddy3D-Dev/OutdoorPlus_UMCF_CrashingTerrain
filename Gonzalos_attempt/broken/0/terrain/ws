@@ -1,0 +1,25 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    volScalarField;
+  location    "0/terrain";
+  object    ws;
+}
+dimensions    [1 -3 0 0 0 0 0];
+internalField    uniform 2.5;
+boundaryField
+{
+  terrain_to_air
+  {
+    type    zeroGradient;
+  }
+  terrain_sides
+  {
+    type    zeroGradient;
+  }
+  terrain_bottom
+  {
+    type    zeroGradient;
+  }
+}

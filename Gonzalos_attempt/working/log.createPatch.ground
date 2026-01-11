@@ -1,0 +1,54 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : createPatch -region ground -overwrite
+Date   : Jan 09 2026
+Time   : 16:56:16
+Host   : "DESKTOP-69FRAKA"
+PID    : 4670
+I/O    : uncollated
+Case   : /mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/urbanMicroclimateFoam-tutorials/windAroundBuildings_CFDHAM_veg
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh ground for time = 0
+
+Reading createPatchDict
+
+Adding new patch ground_to_air as patch 3 from 
+{
+    type            patch;
+}
+
+Adding new patch bottom as patch 4 from 
+{
+    type            patch;
+}
+
+
+Moving faces from patch originalPatch to patch 3
+Moving faces from patch otherSide to patch 4
+
+Doing topology modification to order faces.
+
+Not synchronising points.
+
+Removing patches with no faces in them.
+
+Removing zero-sized patch originalPatch type patch at position 1
+Removing zero-sized patch otherSide type patch at position 2
+Removing patches.
+Writing repatched mesh to 0
+
+End
+

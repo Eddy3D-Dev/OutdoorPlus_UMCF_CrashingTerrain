@@ -1,0 +1,48 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : calcLAI -region air
+Date   : Jan 10 2026
+Time   : 22:09:51
+Host   : "DESKTOP-69FRAKA"
+PID    : 3241
+I/O    : uncollated
+Case   : /mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/OutdoorPlus_UMCF_CrashingTerrain/Gonzalos_attempt/broken
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+timeDirs: 1(0	0)
+Create mesh air for time = 0
+
+
+Reading g
+Gravity is = g [0 1 -2 0 0 0 0] (0 0 -9.81)
+Vertical vector : (-0 -0 1)
+Creating interpolation setup...
+
+Interpolation from fvMesh to Cartesian mesh...minCellSizeFactor = 10, minCellL = 1.2753095
+ took 6.98878 second(s).
+done !!! 
+Interpolation from cartesian to rotated cartesian mesh...
+
+vegLocalCoarseCf 2338
+Solar ray direction 0, It took 0.461991 second(s).
+
+Writing fields: kcLAI boundary
+
+Writing fields: div qrsw
+
+Total time took: 12.146981 second(s).
+
+End
+

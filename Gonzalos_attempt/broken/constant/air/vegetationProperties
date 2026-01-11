@@ -1,0 +1,27 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  location    "constant";
+  object    vegetationProperties;
+}
+vegetationModel    simplifiedVegetation;
+simplifiedVegetationCoeffs
+{
+  a1    a1     [1 0 -3 0 0 0 0] 169;
+  a2    a2     [1 0 -3 0 0 0 0] 18;
+  a3    a3     [1 -1 -2 0 0 0 0] 0.005;
+  D0    D0     [1 -1 -2 0 0 0 0] 1.2;
+  C    C       [ 0 -1 0.5 0 0 0 0 ] 131.035;
+  betaP    betaP   [ 0 0 0 0 0 0 0 ] 1.0;
+  betaD    betaD   [ 0 0 0 0 0 0 0 ] 5.1;
+  H    H       [ 0 1 0 0 0 0 0 ] 1.5;
+  kc    kc      [ 0 0 0 0 0 0 0 ] 0.5;
+  l    l       [ 0 1 0 0 0 0 0 ] 0.1;
+  rsMin    rsMin   [ 0 -1 1 0 0 0 0 ] 150;
+  Rg0    Rg0     [1 0 -3 0 0 0 0] 800;
+  Rl0    Rl0     [1 0 -3 0 0 0 0] 350;
+  nEvapSides    nEvapSides [ 0 0 0 0 0 0 0 ] 1;
+  minCellSizeFactor    minCellSizeFactor [ 0 0 0 0 0 0 0 ] 10;
+}

@@ -1,0 +1,117 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : surfaceFeatures
+Date   : Jan 09 2026
+Time   : 16:46:44
+Host   : "DESKTOP-69FRAKA"
+PID    : 4633
+I/O    : uncollated
+Case   : /mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/urbanMicroclimateFoam-tutorials/windAroundBuildings_CFDHAM_veg
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeaturesDict
+
+Surface            : "buildings_refined.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 20586
+Vertices     : 10680
+Bounding Box : (8.1901426 18.603912 0) (237.283 158.66006 56.5569)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+
+Initial feature set:
+    feature points : 244
+    feature edges  : 2777
+    of which
+        region edges   : 724
+        external edges : 1957
+        internal edges : 96
+
+
+Final feature set:
+points      : 2655
+edges       : 2777
+boundingBox : (8.1901426 18.603912 0) (237.28297 158.66006 56.5569)
+point classification :
+    convex feature points          :      113
+    concave feature points         :        0
+    mixed feature points           :      131
+    other (non-feature) points     :     2411
+edge classification :
+    external (convex angle) edges  :     1957
+    internal (concave angle) edges :       96
+    flat region edges              :        0
+    open edges                     :      724
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "constant/extendedFeatureEdgeMesh/buildings_refined.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/urbanMicroclimateFoam-tutorials/windAroundBuildings_CFDHAM_veg/constant/extendedFeatureEdgeMesh/buildings_refined"
+
+Writing featureEdgeMesh to "constant/triSurface/buildings_refined.eMesh"
+
+Surface            : "trees.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 11520
+Vertices     : 5784
+Bounding Box : (94.897789 86.147125 3) (110.228 112.65598 11)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+
+Initial feature set:
+    feature points : 0
+    feature edges  : 0
+    of which
+        region edges   : 0
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 0
+edges       : 0
+boundingBox : (0 0 0) (0 0 0)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        0
+    other (non-feature) points     :        0
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :        0
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "constant/extendedFeatureEdgeMesh/trees.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/urbanMicroclimateFoam-tutorials/windAroundBuildings_CFDHAM_veg/constant/extendedFeatureEdgeMesh/trees"
+
+Writing featureEdgeMesh to "constant/triSurface/trees.eMesh"
+
+ExecutionTime = 0.06 s  ClockTime = 0 s
+
+End
+

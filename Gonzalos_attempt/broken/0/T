@@ -1,0 +1,46 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    volScalarField;
+  location    "0";
+  object    T;
+}
+dimensions    [0 0 0 1 0 0 0];
+internalField    uniform 293.15;
+boundaryField
+{
+  left
+  {
+    type    zeroGradient;
+  }
+  right
+  {
+    type    zeroGradient;
+  }
+  top
+  {
+    type    zeroGradient;
+  }
+  terrain
+  {
+    type    fixedValue;
+    value    uniform 298.15;
+  }
+  back
+  {
+    type    inletOutlet;
+    inletValue    uniform 293.15;
+    value    uniform 293.15;
+  }
+  front
+  {
+    type    fixedValue;
+    value    uniform 293.15;
+  }
+  buildings
+  {
+    type    fixedValue;
+    value    uniform 298.15;
+  }
+}

@@ -1,0 +1,47 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : extrudeMesh
+Date   : Jan 09 2026
+Time   : 16:55:56
+Host   : "DESKTOP-69FRAKA"
+PID    : 4654
+I/O    : uncollated
+Case   : /mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/urbanMicroclimateFoam-tutorials/windAroundBuildings_CFDHAM_veg
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting extrudeModel linearNormal
+Extruding from surface using model linearNormal
+Flipping normals before extruding
+Not collapsing any edges after extrusion
+
+Extruding surfaceMesh read from file "constant/triSurface/buildings_refined.stl.gz"
+
+Flipping faces.
+
+Extruding surface with :
+    points     : 10680
+    faces      : 20586
+    normals[0] : (0 0 -1)
+
+Mesh bounding box : (8.1901426 18.603912 -1.8524366e-06) (237.283 158.66006 56.5569)
+        with span : (229.09286 140.05615 56.556902)
+Merge distance    : 0
+
+Writing mesh to "constant/region0"
+
+End
+

@@ -1,0 +1,87 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : calcLAI -region air
+Date   : Jan 09 2026
+Time   : 16:59:14
+Host   : "DESKTOP-69FRAKA"
+PID    : 4678
+I/O    : uncollated
+Case   : /mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/urbanMicroclimateFoam-tutorials/windAroundBuildings_CFDHAM_veg
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+timeDirs: 1(0	0)
+Create mesh air for time = 0
+
+
+Reading g
+Gravity is = g [0 1 -2 0 0 0 0] (0 0 -9.81)
+Vertical vector : (-0 -0 1)
+Creating interpolation setup...
+
+Interpolation from fvMesh to Cartesian mesh...minCellSizeFactor = 10, minCellL = 0.93041473
+ took 7.206209 second(s).
+done !!! 
+Interpolation from cartesian to rotated cartesian mesh...
+
+Solar ray direction 0, It took 0.012269 second(s).
+Solar ray direction 1, It took 0.006905 second(s).
+Solar ray direction 2, It took 0.006456 second(s).
+Solar ray direction 3, It took 0.006504 second(s).
+Solar ray direction 4, It took 0.006399 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 5, It took 0.450745 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 6, It took 0.08649 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 7, It took 0.065847 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 8, It took 0.058747 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 9, It took 0.076487 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 10, It took 0.059462 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 11, It took 0.061212 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 12, It took 0.069368 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 13, It took 0.071817 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 14, It took 0.072385 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 15, It took 0.078409 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 16, It took 0.068679 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 17, It took 0.057264 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 18, It took 0.061712 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 19, It took 0.078461 second(s).
+vegLocalCoarseCf 2336
+Solar ray direction 20, It took 0.106548 second(s).
+Solar ray direction 21, It took 0.000336 second(s).
+Solar ray direction 22, It took 0.000248 second(s).
+Solar ray direction 23, It took 0.000213 second(s).
+Solar ray direction 24, It took 0.006353 second(s).
+
+Writing fields: kcLAI boundary
+
+Writing fields: div qrsw
+
+Total time took: 14.896631 second(s).
+
+End
+

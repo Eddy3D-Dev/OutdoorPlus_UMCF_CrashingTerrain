@@ -1,0 +1,102 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : viewFactorsGen -region vegetation
+Date   : Jan 10 2026
+Time   : 22:10:05
+Host   : "DESKTOP-69FRAKA"
+PID    : 3512
+I/O    : uncollated
+Case   : /mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/OutdoorPlus_UMCF_CrashingTerrain/Gonzalos_attempt/broken
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh vegetation for time = 0
+
+
+Creating single cell mesh...
+
+Created single cell mesh...
+
+Total number of coarse faces: 2427
+
+View factor patches included in the calculation : 8(0 1 2 3 4 5 6 7)
+
+Calculating view factors...
+Writing view factor matrix...
+F00: 0
+F01: 0.062599538
+F02: 0.13324332
+F03: 0.13264105
+F04: 0.31337114
+F05: 0.35022983
+F06: 0.047967281
+F07: 9.9387617e-05
+F10: 0.062599538
+F11: 0
+F12: 0.1323011
+F13: 0.13281513
+F14: 0.31498512
+F15: 0.35022917
+F16: 0.046876032
+F17: 6.5374191e-05
+F20: 0.1165879
+F21: 0.11576346
+F22: 0
+F23: 0.08372312
+F24: 0.3138053
+F25: 0.35430616
+F26: 0.051534092
+F27: 8.7710394e-05
+F30: 0.11606092
+F31: 0.11621324
+F32: 0.08372312
+F33: 0
+F34: 0.32225482
+F35: 0.35430558
+F36: 0.045846901
+F37: 0.00033337162
+F40: 0.10277378
+F41: 0.1033031
+F42: 0.11761848
+F43: 0.12078547
+F44: 0
+F45: 0.49174983
+F46: 0.081996243
+F47: 0.0010860692
+F50: 0.10944682
+F51: 0.10944662
+F52: 0.12653791
+F53: 0.12653771
+F54: 0.46856616
+F55: 0
+F56: 0.078603976
+F57: 0.0005400731
+F60: 0.044087227
+F61: 0.043084249
+F62: 0.054132023
+F63: 0.04815813
+F64: 0.22984058
+F65: 0.23118635
+F66: 0.34795032
+F67: 0.0054498307
+F70: 0.006846075
+F71: 0.0045031426
+F72: 0.0069664777
+F73: 0.026388137
+F74: 0.27070953
+F75: 0.1206667
+F76: 0.43188918
+F77: 0.16512545
+End
+

@@ -1,0 +1,22 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    extrudeMeshDict;
+}
+constructFrom    mesh;
+sourceCase    ".";
+sourcePatches    (otherSide);
+exposedPatchName    movingWall;
+surface    "constant/triSurface/buildings_refined.stl.gz";
+flipNormals    false;
+extrudeModel    linearNormal;
+nLayers    4;
+expansionRatio    1.0;
+linearNormalCoeffs
+{
+  thickness    0.08;
+}
+mergeFaces    false;
+mergeTol    0;

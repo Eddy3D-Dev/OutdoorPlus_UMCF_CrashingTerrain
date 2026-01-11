@@ -1,0 +1,9 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    surfaceFeaturesDict;
+}
+surfaces    ("buildings.stl" "vegetation.stl");
+#includeEtc    "caseDicts/surface/surfaceFeaturesDict.cfg";

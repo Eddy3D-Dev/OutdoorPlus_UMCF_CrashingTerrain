@@ -1,0 +1,53 @@
+FoamFile
+{
+  version    2.0;
+  format    ascii;
+  class    dictionary;
+  object    topoSetDict;
+}
+actions
+(
+  {
+    name    buildings_layer1;
+    type    cellSet;
+    action    new;
+    source    rotatedBoxToCell;
+    sourceInfo
+    {
+      origin    (238.2830047607422 17.603912353515625 -1);
+      i    (0 142.05615234375 0);
+      j    (-231.09286212921143 0 0);
+      k    (0 0 57.55690002441406);
+    }
+  }
+  {
+    name    buildings_layer1;
+    type    cellSet;
+    action    delete;
+    source    cellToCell;
+    sourceInfo
+    {
+      set    addedCells_layer2;
+    }
+  }
+  {
+    name    buildings_layer1;
+    type    cellZoneSet;
+    action    new;
+    source    setToCellZone;
+    sourceInfo
+    {
+      set    buildings_layer1;
+    }
+  }
+  {
+    name    buildings_layer2;
+    type    cellZoneSet;
+    action    new;
+    source    setToCellZone;
+    sourceInfo
+    {
+      set    addedCells_layer2;
+    }
+  }
+);

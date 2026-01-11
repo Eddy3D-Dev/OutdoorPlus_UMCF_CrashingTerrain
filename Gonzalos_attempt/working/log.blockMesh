@@ -1,0 +1,74 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : blockMesh
+Date   : Jan 09 2026
+Time   : 16:46:44
+Host   : "DESKTOP-69FRAKA"
+PID    : 4632
+I/O    : uncollated
+Case   : /mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/urbanMicroclimateFoam-tutorials/windAroundBuildings_CFDHAM_veg
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from
+    "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 15
+        j : 15
+        k : 15
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (-115 -120 0) (365 300 150)
+  nPoints: 10527
+  nCells: 8960
+  nFaces: 28376
+  nInternalFaces: 25384
+----------------
+Patches
+----------------
+  patch 0 (start: 25384 size: 280) name: west
+  patch 1 (start: 25664 size: 280) name: east
+  patch 2 (start: 25944 size: 320) name: north
+  patch 3 (start: 26264 size: 320) name: south
+  patch 4 (start: 26584 size: 896) name: ground
+  patch 5 (start: 27480 size: 896) name: top
+
+End
+

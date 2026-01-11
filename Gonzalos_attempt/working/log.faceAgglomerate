@@ -1,0 +1,45 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : faceAgglomerate -region vegetation
+Date   : Jan 09 2026
+Time   : 16:59:10
+Host   : "DESKTOP-69FRAKA"
+PID    : 4677
+I/O    : uncollated
+Case   : /mnt/c/Users/pkastner/Documents/GitHub/Eddy3D-Dev/urbanMicroclimateFoam-tutorials/windAroundBuildings_CFDHAM_veg
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh vegetation for time = 0
+
+
+Agglomerating patch : west
+
+Agglomerating patch : east
+
+Agglomerating patch : north
+
+Agglomerating patch : south
+
+Agglomerating patch : top
+
+Agglomerating patch : ground
+
+Agglomerating patch : buildings
+
+Agglomerating patch : air_to_vegetation
+
+Writing facesAgglomeration
+End
+
